@@ -1,0 +1,181 @@
+# Plan de estudio de lenguajes de ordenador
+
+digraph P {
+
+	graph [
+		splines=ortho,
+		rankdir=LR;
+		ranksep=1.0,
+		nodesep=0.5,
+    	fontname="monospace",
+    	fontsize="18",
+    	label="Evolución de los lenguajes de programación\nhttp://bluebones.net/evolution\n\n\n ",
+    	labelloc=t,
+    	pad=0.5,
+    	];
+
+	node [
+		width=1.5,
+		color=black,
+		fontcolor=white,
+		style=filled,
+		shape=rectangle,
+		fontname="monospace",
+		];
+
+	"Assembly" [shape=circle];
+	"Sketchpad";
+	"Pascal" [shape=circle];
+	"JOSS";
+	"STRINGCOMP";
+	"FLOWMATIC";
+	"COMTRAN";
+	"Lisp" [shape=circle];
+	"PLANNER";
+	"ISWIM";
+	"FP";
+	"dBASE";
+	"SQL";
+	"RPG";
+	"ColdFusion";
+	"APL";
+
+    node [
+    	color=gray,
+    	fontcolor=black,
+    	style=filled,
+    	shape=rectangle,
+    	fontname="monospace"
+    	];
+
+    edge [
+    	penwidth=0.5,
+    	arrowhead=none
+    	];
+
+    # recomendados
+
+    "C" [shape=circle];
+    "Haskell" [shape=circle];
+    "Prolog" [shape=circle];
+    "Scheme" [shape=circle];
+    "Assembly" [shape=circle];
+    "Pascal" [shape=circle];
+    "Lisp" [shape=circle];
+
+    # relaciones
+
+	"Assembly" -> "Fortran";
+	"Assembly" -> "BCPL/Bon" -> "B" -> "C";
+
+	"C" -> "C++" -> "Java" -> "C#";
+	"C" -> "Perl";
+	"C" -> "Javascript";
+	"C" -> "Objective-C";
+
+	"sh" -> "Perl";
+	"awk" -> "Perl";
+	"sed" -> "Perl";
+
+	"Perl" -> "PHP";
+	"Perl" -> "Ruby";
+	"Perl" -> "Python";
+
+	"Tcl" -> "Python";
+
+	"LIS" -> "Ruby";
+	"Ada" -> "Ruby";
+
+	"Fortran" -> "Algol";
+	"Fortran" -> "BASIC";
+	"Fortran" -> "PL/I";
+
+	"Algol" -> "PL/I";
+	"Algol" -> "Simula";
+	"Algol" -> "CLU" -> "Ruby";
+	"Algol" -> "BASIC";
+
+	"Sketchpad" -> "Smalltalk";
+	"Simula" -> "Smalltalk";
+
+	"BASIC" -> "Visual Basic" -> "C#"; 
+	"BASIC" -> "SuperBasic"; 
+
+	"Smalltalk" -> "Self" -> "Javascript";
+	"Smalltalk" -> "Objective-C";
+	"Smalltalk" -> "Python";
+	"Smalltalk" -> "Ruby";
+	"Smalltalk" -> "Scheme";
+
+	"Pascal" -> "Delphi" -> "C#";
+	"Pascal" -> "Modula-2";
+	"Pascal" -> "Alphard";
+
+	"Modula-2" -> "Modula-3";
+	"Modula-2" -> "Oberon";
+
+	"JOSS" -> "ISIS";
+	"JOSS" -> "PIL/I";
+	"JOSS" -> "FILECOMP";
+	"JOSS" -> "FOCAL" -> "COKE";
+	"JOSS" -> "CITRAN";
+	"JOSS" -> "TELCOMP";
+	"JOSS" -> "CAL" -> "SuperBasic";
+
+	"TELCOMP" -> "MUMPS";
+	"TELCOMP" -> "Logo";
+
+	"STRINGCOMP" -> "MUMPS";
+
+	"FLOWMATIC" -> "COBOL";
+	"COMTRAN" -> "COBOL";
+
+	"COBOL" -> "ABAP";
+	"COBOL" -> "PL/I";
+
+	"PL/I" -> "PL/S" -> "PL/SA" -> "PL/X";
+	"PL/I" -> "CP/M";
+	"PL/I" -> "PL/C";
+	
+	"Lisp" -> "Emacs Lisp";
+	"Lisp" -> "Logo";
+	"Lisp" -> "Maclisp" -> "Scheme";
+	"Lisp" -> "Common Lisp" -> "Dylan" -> "Ruby";
+	"Lisp" -> "AutoLisp";
+	"Lisp" -> "BBN Lisp";
+	"Lisp" -> "InterLisp" -> "QLISP";
+
+	"PLANNER" -> "MICRO PLANNER" -> "Prolog";
+	"PLANNER" -> "PICO PLANNER";
+	"PLANNER" -> "POPLER";
+	"PLANNER" -> "QA4";
+	"PLANNER" -> "QLISP";
+
+	"ISWIM" -> "SASLI" -> "KRC" -> "Miranda";
+	"ISWIM" -> "ML" -> "Miranda";
+	"ISWIM" -> "HOPE" -> "Miranda";
+
+	"Miranda" -> "Haskell";
+
+	"Haskell" -> "Mondrian";
+	"Haskell" -> "Haskell++";
+	"Haskell" -> "O'Haskell";
+
+	"dBASE" -> "Clipper";
+	"dBASE" -> "Recital";
+	"dBASE" -> "Foxpro";
+
+	"FP" -> "FL";
+	"FP" -> "J";
+
+	"APL" -> "J";
+
+	edge [style=invis];
+
+	"SQL" -> "RPG" -> "ColdFusion";
+	"ColdFusion" -> "FP";
+	"RPG" -> "dBASE";
+	"SQL" -> "ISWIM";
+
+
+}
